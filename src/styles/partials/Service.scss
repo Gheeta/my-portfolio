@@ -1,0 +1,62 @@
+.Service{
+    background-color: var(--bgColor-1);
+    height: 100%;
+    .text-center{
+        margin: 0;
+        padding: 2rem var(--padding);
+        text-align: center;
+    }
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding) 2rem;
+    text-align: center;
+}
+.card{
+    width: 18rem;
+    background-color: var(--bgColor-2);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover{
+    scale:.9;
+   }
+    .icon{
+        font-size: 3.12rem;
+        text-align: center;
+        color: var(--primaryColor);
+        margin: 2rem;
+    }
+    
+    
+}
+///------media query----------//
+
+@media screen and (min-width:992px)and (max-width:1200px){
+    .card{
+        margin-left: 0.4rem;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+@media screen and (min-width:576px) and (max-width:767px){
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width:575px){
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,416 @@
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor-1);
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: 3.5rem;
+    margin: 1.7rem 0;
+}
+h2{
+    font-size: 2.2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--secondaryColor);
+}
+span{
+    color: var(--primaryColor);
+}
+nav{
+    //background-color: red;
+    //padding-top: 2.8rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //position: fixed;
+    //z-index: 2;
+
+     position: fixed;
+    // top: 0;
+     left: 0;
+     right: 0;
+     height: 80px;
+     padding-top: 0;
+     background-color: var(--bgColor-1);
+     border-bottom: 1px solid var(--bgColor-2);
+     z-index: 100;
+}
+nav {           //Sass Nested Rules and Properties by gheeta
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+  }
+  a{
+    text-decoration: none;
+    color: var(--lightColor);
+    text-transform: capitalize;
+    transition: .4s;
+     padding: 4px 8px;
+    border-radius: 5px;
+  }
+  a:hover{
+    color: var(--primaryColor);
+    background-color: var(--bgColor-2);
+  }
+}
+.logo>a:hover{         //---------logo back to home------
+    color: var(--lightColor);
+    background-color: transparent;
+}
+
+.btn{
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    border-radius: 30px;
+     transition: .2s;
+     border: 2px solid transparent;
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--lightColor);
+    border: 2px solid var(--primaryColor);
+    cursor: pointer;
+}
+.content{
+    //background-color: rebeccapurple;
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 80px;
+}
+.container_texts{
+    position: relative;
+    //height: 57%;
+    //bottom: 70px;
+    //flex: 1;
+}
+.social{
+    margin-top: 4.5rem;
+   img{
+    margin-right: 1.5rem;
+    width: 2.5rem;
+    transition: .4s;
+} 
+.social a{
+    text-decoration: none;
+}
+   img:hover{
+    transform: scale(1.3);
+  }
+}
+ .container_image{
+    //flex: 1;
+    width: 45%;
+    height: 85%;
+    position: relative;
+    align-self: flex-end;
+   img{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1.5s;
+    //justify-items: center;
+    //align-items: center;
+    //transform: scale(1.5);
+}
+
+.shape{
+    &:hover{
+    bottom: 40px;
+    opacity: 0.5;
+   }
+}
+   .my-pic{
+    z-index: 2;
+    &:hover{
+       left: 45%;
+    }
+}
+}
+//--------------------/*humberg menue*/----------------
+.hamburger{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--bgColor-1);
+}
+.hamburger span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightColor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+    &:nth-child(2){
+        width: 20px;
+        background-color: var(--primaryColor);
+    }
+}
+#click{
+    display: none;
+}
+//------snap bar animation--------------
+.active1{
+    transform: translate(0px, -2px) rotate(45deg);
+    }
+.active2{
+    opacity: 0;
+    transform: translateX(15px) ;
+}
+.active3{
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+// #click span:nth-child(1){
+//     transform: translate(0px, -2px) rotate(45deg);
+// }
+// #click span:nth-child(2){
+//     opacity: 0;
+//     transform: translateX(15px) ;
+// }
+// #click span:nth-child(3){
+//     transform: translate(-3px, 3px) rotate(-45deg);
+// }
+
+//--------------------/*media query*/----------------
+@media screen and (min-width:768) and (max-width:991px){
+    h1{
+    font-size: 2.5rem;
+    margin: 1.2rem 0;
+}
+       nav{
+        position: fixed;
+        top:0;
+        left:0;
+        right: 0;
+        height: 80px;
+        padding-top: 0;
+        background-color: var(--bgColor-1);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+        nav ul li{
+        //display: flex;
+        text-align: center;
+        margin: 1rem;
+    }
+   
+    .hamburger{
+        display: block;
+    }
+    .container_image{
+        display: none;
+    }
+    /////home////
+    .container_texts{
+       margin-top: 2rem;
+    }
+    .social{
+        margin-top: 50px;
+    img{
+    margin-right: 1rem;
+    width: 2.5rem;
+    transition: .4s;  
+    }
+}
+    h3{
+        margin-bottom: 70px;
+    }
+}
+@media screen and (min-width:576px) and (max-width:767px){
+    h1{
+    font-size: 3.5rem;
+    margin: 0.7rem 0;
+}
+       nav{
+        position: fixed;
+        top:0;
+        left:0;
+        right: 0;
+        height: 80px;
+        padding-top: 0;
+        background-color: var(--bgColor-1);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+     nav ul{
+        //display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgColor-2);
+        top: 80px;
+        left: -110%;
+        transition:all .7s;
+    }
+
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 4rem;
+    }
+    nav ul li a{
+        font-size: 20px;
+        background-color: var(--bgColor-1);
+        &:link,
+        &:visited{
+            background-image: linear-gradient(120deg, transparent 0, transparent 50%, var(--lightColor) 50%);
+            background-size: 230%;
+            transition: all 0.5s;
+        }
+        &:hover,
+        &:active{
+            padding: 10px 20px;
+            background-position: 100%;
+        }
+        &:active{
+            .hideList ul{
+                left: -110%;
+                display: none;
+            }
+        }
+    }
+    nav ul li a:hover{
+        background-color: var(--bgColor-1);
+    }
+     
+   
+    #click:checked~ul{            //---open nav when click on hamburger -----
+        left: 0;
+        background-color: rgba(255,255,255,0.4);
+        backdrop-filter: blur(15px);
+    }
+   
+
+    .hamburger{
+        display: block;
+    }
+
+    .container_image{
+        display: none;
+    }
+    /////home////
+    .container_texts{
+       margin-top: 2rem;
+    }
+    .social{
+        margin-top: 50px;
+    img{
+    margin-right: 1rem;
+    width: 2.5rem;
+    transition: .4s;  
+    }
+}
+    h3{
+        margin-bottom: 70px;
+    }
+
+}
+@media screen and (max-width:575px){
+    nav{
+        position: fixed;
+        top:0;
+        left:0;
+        right: 0;
+        height: 80px;
+        padding-top: 0;
+        background-color: var(--bgColor-1);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        //display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgColor-2);
+        top: 80px;
+        left: -110%;
+        transition:all .7s;
+    }
+   
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 4rem;
+    }
+    nav ul li a{
+        font-size: 20px;
+        background-color: var(--bgColor-1);
+        &:link,
+        &:visited{
+            background-image: linear-gradient(120deg, transparent 0, transparent 50%, var(--lightColor) 50%);
+            background-size: 230%;
+            transition: all 0.5s;
+        }
+        &:hover,
+        &:active{
+            padding: 10px 20px;
+            background-position: 100%;
+        }
+    }
+    nav ul li a:hover{
+        background-color: var(--bgColor-1);
+    }
+    #click:checked~ul{                      //---open nav when click on hamburger -----
+        left: 0;
+        background-color: rgba(255,255,255,0.4);
+        backdrop-filter: blur(15px);
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+
+    .container_image{
+        display: none;
+    }
+    /////home////
+    .container_texts{
+       margin-top: 5rem;
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-bottom: 70px;
+    }
+}

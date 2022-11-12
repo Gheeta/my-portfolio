@@ -1,0 +1,79 @@
+.contact-form{
+   width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor-1);
+    //padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    span{
+        font-size: 1.3rem;
+    font-weight: bold;
+    }
+}
+
+.c-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  //flex: 1;
+}
+
+.c-right > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.c-right .user {
+  width: 20rem;
+  height: 2rem;
+  padding: 0.3em;
+  outline: none;
+  border: 2px solid var(--primaryColor);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 4rem !important;
+}
+////---left------
+.awesome {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+    transform: translate(17%, -60%);
+ //align-items: center;
+  /* gap: 20px; */
+}
+
+.awesome > :nth-child(1) {
+  color: var(--lightColor);
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(2) {
+  color: var(--primaryColor);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+  .contact-form {
+    //padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 40rem;
+  }
+  .c-right .user {
+    width: 16rem;
+  }
+  .contact-header{
+    text-align: center;
+    top: 7rem;
+    left: -3rem;
+  }
+}

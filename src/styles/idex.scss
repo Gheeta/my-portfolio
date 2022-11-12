@@ -1,0 +1,37 @@
+:root{
+  --primaryColor: #ff274b;
+  --secondaryColor: #f7bcf7;
+  --lightColor: #fff;
+  --bgColor-1: #171a1c;
+  --bgColor-2: #22282a;
+  --padding : 5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px ;          //--(1rem= 16px)--
+  color: var(--lightColor);
+  scroll-behavior: smooth;
+}
+
+@import"./partials/Home.scss";
+@import"./partials/AboutMe.scss";
+@import"./partials/Service.scss";
+
+
+@media screen and (max-width:575px){
+  :root{
+    --padding:1.5rem;
+  }
+  html{
+    font-size: 13px;
+  }
+}
+
+
